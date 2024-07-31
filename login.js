@@ -10,6 +10,7 @@ document.getElementById('loginButton').addEventListener('click', function() {
     const loginError = document.getElementById('loginError');
 
     if (validCredentials[user] && validCredentials[user] === senha) {
+        localStorage.setItem('authToken', 'loggendIn')
         window.location.href = 'verificacao.html';
     } else {
         loginError.textContent = 'CPF ou SENHA incorretos. Tente novamente.';
