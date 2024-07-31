@@ -1,6 +1,6 @@
 const validCredentials = {
     '11765919401': '23030270ji',
-    'user2': 'password2',  // Adicione novos usuários e senhas aqui
+    '09711439433': '988391077',  // Adicione novos usuários e senhas aqui
     'user3': 'password3'
 };
 
