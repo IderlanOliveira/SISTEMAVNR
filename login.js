@@ -4,12 +4,15 @@ const validCredentials = {
 };
 
 // Função de login
-function login(user, senha) {
+function login() {
+    const user = document.getElementById("cpf").value;
+    const senha = document.getElementById("senha").value;
+
     if (validCredentials[user] && validCredentials[user] === senha) {
-        localStorage.setItem("auth", "ok"); // corrigido localStorage
+        localStorage.setItem("auth", "ok"); // aqui estava errado (localStore)
         window.location.href = "verificacao.html";
     } else {
-        alert("CPF ou SENHA incorretos!");
+        document.getElementById("loginError").innerText = "CPF ou SENHA incorretos!";
     }
 }
 
@@ -20,3 +23,6 @@ function checkAuth() {
         window.location.href = "index.html";
     }
 }
+
+// Quando clicar no botão de login → chama a função login()
+document.getElementById("loginButton").addEventListener("click", login);
