@@ -7,7 +7,7 @@ const validCredentials = {
 funcion login(user,senha){
     if (validCredentials[user] && validCredentials[user] === senha) {
         localStore.setItem("auth", "ok");
-        window.location.href = "verificacao.html;
+        window.location.href = "verificacao.html";
     } else {
         alert("CPF ou SENHA incorretos!");
     }
@@ -21,3 +21,4 @@ function checkAuth(){
 
     }
 }
+
