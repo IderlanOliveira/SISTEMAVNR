@@ -16,3 +16,4 @@ document.getElementById('loginButton').addEventListener('click', function() {
         loginError.textContent = 'CPF ou SENHA incorretos. Tente novamente.';
     }
 });
+
